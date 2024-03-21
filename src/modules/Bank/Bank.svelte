@@ -2,6 +2,7 @@
   import Tab from "./components/Tab.svelte";
   import History from "./components/History.svelte";
   import Main from "./components/Main.svelte";
+  import {Motion} from "svelte-motion";
 
 
   type Page = 'main' | 'history';
@@ -15,10 +16,14 @@
     main: Main
   }
 
-  const tabs: {label: string, page: Page}[] = [
+  const tabs: { label: string, page: Page }[] = [
     {
       label: 'History',
       page: 'history'
+    },
+    {
+      label: 'Main',
+      page: 'main'
     }
   ]
 
@@ -57,15 +62,20 @@
   }
 
   .bank {
+    display: flex;
+    flex-direction: column;
+    gap: pxToVh(20);
     background-color: #060e18;
     border-radius: pxToVh(20);
     padding: pxToVh(50);
     color: white;
-    width: pxToVh(750);
+    width: pxToVh(850);
+
 
     &Navigation {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      gap: pxToVh(10);
 
       :global(.tab) {
         width: 100%;

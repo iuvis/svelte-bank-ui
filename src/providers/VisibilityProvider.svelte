@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { useNuiEvent } from '../utils/useNuiEvent';
-  import { fetchNui } from '../utils/fetchNui';
-  import { onMount } from 'svelte';
-  import { visibility } from '../store/stores';
+  import {useNuiEvent} from '../utils/useNuiEvent';
+  import {fetchNui} from '../utils/fetchNui';
+  import {onMount} from 'svelte';
+  import {visibility} from '../store/stores';
 
   let isVisible: boolean;
 

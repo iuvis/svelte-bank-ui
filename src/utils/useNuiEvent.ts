@@ -1,4 +1,4 @@
-import { onDestroy } from "svelte";
+import {onDestroy} from "svelte";
 
 interface NuiMessage<T = unknown> {
   action: string;
